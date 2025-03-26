@@ -16,7 +16,7 @@ export function CardComp({ card } : { card: CardType }) {
       <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-none">{card.title}</h3>
       <h4 className="font-normal text-gray-700 dark:text-gray-400 leading-none">{card.subtitle}</h4>
       <hr />
-      <ul className="list-none dark:text-slate-300">
+      <ul className="list-disc pl-5 dark:text-slate-300">
         <li >{card.phone}</li>
         <li>{card.address}</li>
         <li>{card.cardNumber}</li>
