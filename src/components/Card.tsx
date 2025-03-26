@@ -9,7 +9,7 @@ export function CardComp({ card } : { card: CardType }) {
 
   return (
     <Card
-      className="max-w-sm my-10"
+      className="max-w-1/5 my-10"
       imgAlt="Meaningful alt text for an image that is not purely decorative"
       imgSrc={card.image}
     >
