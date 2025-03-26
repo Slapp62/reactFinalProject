@@ -1,7 +1,9 @@
 import { CardType } from "../data/cardData";
 import { Card, Button } from "flowbite-react";
 
-import { MdLocalPhone } from "react-icons/md";
+import { FaPhone } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa6";
 
 export function CardComp({ card } : { card: CardType }) {
 
@@ -19,7 +21,13 @@ export function CardComp({ card } : { card: CardType }) {
         <li>{card.address}</li>
         <li>{card.cardNumber}</li>
       </ul>
-      <Button className="w-fit ml-auto rounded-full bg-sky-600"><MdLocalPhone size={30} className="text-slate-100" /></Button>
+
+      <div className="flex justify-end">
+        <Button className="px-3 bg-transparent dark:bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 text-sky-700 dark:text-sky-500"><FaRegHeart size={30} /></Button>
+        <Button className="px-3 bg-transparent dark:bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 text-sky-700 dark:text-sky-500"><FaHeart size={30} /></Button>
+        <Button className="px-3 bg-transparent dark:bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 text-sky-700 dark:text-sky-500"><FaPhone size={30}/></Button>
+      </div>
+      
     </Card>
   );
 }

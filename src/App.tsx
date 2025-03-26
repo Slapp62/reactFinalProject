@@ -5,6 +5,7 @@ import { Nav } from "./components/Nav";
 import { CardComp } from "./components/Card";
 import { CarouselComp } from "./components/Carousel";
 import { FooterComp } from "./components/footer";
+import { PageComp } from "./components/pagination";
 // import {Hook, App2} from "./hooks";
 // import Square from "./components/exercise2";
 
@@ -28,7 +29,10 @@ function App() {
               <CardComp key={index} card={card} />
             ))}
           </div>
-
+          
+          <div>
+            <PageComp/>
+          </div>
         </main>
         
         <footer>
