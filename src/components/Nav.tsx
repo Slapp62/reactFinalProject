@@ -4,7 +4,7 @@ import { DarkThemeToggle, Navbar, NavbarBrand, NavbarCollapse, NavbarLink, Navba
 import { AvatarComp } from "./avatar";
 
 
-export function Nav() {
+export function Nav({ onLoginClick }: { onLoginClick: () => void }) {
   return (
     <Navbar fluid className=" bg-white shadow-md rounded-none opacity-90">
 
@@ -19,13 +19,13 @@ export function Nav() {
         <NavbarToggle />
       </div>
 
-      <NavbarCollapse>
+      <NavbarCollapse className="flex align-center justify-center">
         <NavbarLink href="#" active>
           Home
         </NavbarLink>
         <NavbarLink href="#">About</NavbarLink>
         <NavbarLink href="#">Register</NavbarLink>
-        <NavbarLink href="#">Log In</NavbarLink>
+        <NavbarLink onClick={onLoginClick} className="cursor-pointer">Login</NavbarLink>
         <NavbarLink href="#">Contact</NavbarLink>
       </NavbarCollapse>
     </Navbar>
