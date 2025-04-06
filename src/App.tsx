@@ -1,17 +1,28 @@
 import "./index.css";
-import { cardData } from "./data/cardData";
 
+import { useEffect, useState } from "react";
+import { Tcards } from "./data/Types";
 import { Nav } from "./components/Nav";
 import { CardComp } from "./components/Card";
 import { CarouselComp } from "./components/Carousel";
 import { FooterComp } from "./components/footer";
 import { PageComp } from "./components/pagination";
+import getCards from "./data/api";
 // import {Hook, App2} from "./hooks";
 // import Square from "./components/exercise2";
 
 
 function App() {
+  const [cards, setCards] = useState<Tcards[]>([]);
   
+  useEffect(() => {
+    const fetchCards = async () => {
+      const response = await getCards();
+      setCards(response.data);
+    };
+
+    fetchCards();
+  }, []);
 
   return (
     <>
@@ -24,9 +35,9 @@ function App() {
             <CarouselComp/>
           </div>
 
-          <div className="flex justify-evenly gap-3">
-            {cardData.map((card, index) => (
-              <CardComp key={index} card={card} />
+          <div className="flex flex-wrap justify-evenly gap-2 w-2/3 m-auto items-stretch">
+            {cards.map((card, index) => (
+              <CardComp key={index} card={card}/>
             ))}
           </div>
           
