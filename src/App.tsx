@@ -9,8 +9,8 @@ import { FooterComp } from "./components/footer";
 import { PageComp } from "./components/pagination";
 import {Login} from "./components/loginModal";
 import getCards from "./data/api";
-// import {Hook, App2} from "./hooks";
-// import Square from "./components/exercise2";
+import { ToastContainer } from 'react-toastify';
+
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-      
+      <ToastContainer aria-label={undefined} />
       <div className="flex flex-col min-h-screen bg-slate-200 dark:bg-black">
         <nav className="sticky top-0 z-50">
           <Nav onLoginClick={() => setLoginOpen(true)} />
