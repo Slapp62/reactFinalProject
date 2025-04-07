@@ -12,6 +12,13 @@ export type Tcards = {
     }
 };
 
+export type TPaginationProps = {
+  currentPage: number;
+  onPageChange: (page: number) => void;
+  totalPages: number;
+};
+
+
 // export const cardData: Tcards[] = 
 //     const [cards, setCards] = useState<Tcards[]>([]);
 

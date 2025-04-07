@@ -1,5 +1,4 @@
 import { Card, Button } from "flowbite-react";
-
 import { FaPhone } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
@@ -9,7 +8,7 @@ export function CardComp({ card } : { card: Tcards }) {
   
 
   return (
-    <Card className="flex gap-2 max-w-sm my-2 w-[300px]">
+    <Card className="flex my-2 w-[350px]">
       <div className="w-full">
         <img src={card.image.url} alt="" className="object-cover w-full h-[200px]" />
       </div>
