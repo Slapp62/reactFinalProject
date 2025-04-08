@@ -6,14 +6,12 @@ const getCards = async () => {
     }
 
 const getLoginToken = async (email:string, password:string) => {
-  const response = await axios.post("https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users/login",
+   return await axios.post("https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users/login",
     {
       email,
       password
   });
-  await console.log({response});
   
-  await localStorage.setItem("loginToken", JSON.stringify(response.data))
 }
 
 export {getCards, getLoginToken}

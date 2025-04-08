@@ -56,9 +56,10 @@ function App() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true, amount: 0.2 }}>
+              viewport={{ once: true, amount: 0.2 }}
+              className="items-stretch">
 
-              <CardComp key={index} card={card}/>
+              <CardComp key={index} card={card} />
 
               </motion.div>
             ))}

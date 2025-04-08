@@ -2,7 +2,7 @@
 
 import { Button, Checkbox, Label, Modal, ModalBody, ModalHeader, TextInput } from "flowbite-react";
 import { useState } from "react";
-import { getLoginToken } from "../data/api";
+import axios from "axios";
 
 type Props = {
     show: boolean;
@@ -57,8 +57,12 @@ export function Login({ show, onClose }: Props) {
             <div className="w-full">
                 <Button onClick={async () => {
                     try {
-                        const response = await getLoginToken(email, password);
-                        console.log(response)
+                        const response = await axios.post("https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users/login",
+                          {
+                            email,
+                            password
+                        });;
+                        localStorage.setItem("token", response.data);
                     } catch (error) {
                         console.error("Wrong credentials", error)};
                     }}>

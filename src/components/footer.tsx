@@ -1,4 +1,4 @@
-
+import UserTable from "./services/userTable";
 import { Footer, FooterBrand, FooterCopyright, FooterLink, FooterLinkGroup } from "flowbite-react";
 
 export function FooterComp() {
@@ -15,6 +15,7 @@ export function FooterComp() {
           <FooterCopyright href="#" by="Simcha Lapp" year={2025} />
           <FooterLinkGroup>
             <FooterLink href="#">About</FooterLink>
+            <FooterLink href="#" onClick={UserTable}>Admin Controls</FooterLink>
             <FooterLink href="#">Privacy Policy</FooterLink>
             <FooterLink href="#">Licensing</FooterLink>
             <FooterLink href="#">Contact</FooterLink>
