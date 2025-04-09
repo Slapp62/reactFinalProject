@@ -2,6 +2,7 @@ import { TiBusinessCard } from "react-icons/ti";
 
 import { DarkThemeToggle, Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
 import { AvatarComp } from "./avatar";
+import { Link } from "react-router-dom";
 
 
 export function Nav({ onLoginClick }: { onLoginClick: () => void }) {
@@ -20,13 +21,12 @@ export function Nav({ onLoginClick }: { onLoginClick: () => void }) {
       </div>
 
       <NavbarCollapse className="flex align-center justify-center">
-        <NavbarLink href="#" active>
-          Home
-        </NavbarLink>
-        <NavbarLink href="#">About</NavbarLink>
+        <Link as={Link} to='/' active>Home</Link>
+        <Link as={Link} to='/about'>About</Link>
         <NavbarLink href="#">Register</NavbarLink>
         <NavbarLink onClick={onLoginClick} className="cursor-pointer">Login</NavbarLink>
         <NavbarLink href="#">Contact</NavbarLink>
+        <Link as={Link} to="/adminControl">Admin Controls</Link>
       </NavbarCollapse>
     </Navbar>
   );

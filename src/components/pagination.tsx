@@ -4,7 +4,7 @@
 import { Pagination } from "flowbite-react";
 import { TPaginationProps } from "../data/Types";
 
-export function PageComp({ currentPage, onPageChange, totalPages } : TPaginationProps) {
+export function PageComp({ currentPage, totalPages,onPageChange  } : TPaginationProps) {
 
   return (
     <div className="flex overflow-x-auto sm:justify-center">

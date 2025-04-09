@@ -8,7 +8,7 @@ export function CardComp({ card } : { card: Tcards }) {
   
 
   return (
-    <Card className="flex my-2 w-[350px]">
+    <Card className="flex flex-col h-full my-2 w-[350px]">
       <div className="w-full">
         <img src={card.image.url} alt="" className="object-cover w-full h-[200px]" />
       </div>
@@ -17,7 +17,7 @@ export function CardComp({ card } : { card: Tcards }) {
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-none ">{card.title}</h3>
         <h4 className="font-normal text-gray-700 dark:text-gray-400 leading-none ">{card.subtitle}</h4>
         <hr />
-        <p>{card.description}</p>
+        <p className="line-clamp-3">{card.description}</p>
         <ul className="list-disc pl-5 dark:text-slate-300">
           <li >{card.phone}</li>
           <li>{card.email}</li>

@@ -10,6 +10,15 @@ type Props = {
     };
 
 export function Login({ show, onClose }: Props) {
+
+  const getLoginToken = async (email:string, password:string) => {
+    return await axios.post("https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users/login",
+     {
+       email,
+       password
+   });
+   
+ }
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -57,11 +66,7 @@ export function Login({ show, onClose }: Props) {
             <div className="w-full">
                 <Button onClick={async () => {
                     try {
-                        const response = await axios.post("https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users/login",
-                          {
-                            email,
-                            password
-                        });;
+                        const response = await getLoginToken(email, password);
                         localStorage.setItem("token", response.data);
                     } catch (error) {
                         console.error("Wrong credentials", error)};

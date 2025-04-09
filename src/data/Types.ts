@@ -1,3 +1,4 @@
+
 export type Tcards = {
     _id: number;
     title: string;
@@ -18,6 +19,34 @@ export type TPaginationProps = {
   totalPages: number;
 };
 
+export type TUsers = {
+  _id: string;
+  name: {
+    first: string;
+    middle?: string;
+    last: string;
+    _id: string;
+  };
+  phone: string;
+  email: string;
+  image: {
+    url: string;
+    alt: string;
+    _id: string;
+  };
+  address: {
+    state?: string;
+    country: string;
+    city: string;
+    street: string;
+    houseNumber: number;
+    zip?: number;
+    _id: string;
+  };
+  isAdmin: boolean;
+  isBusiness: boolean;
+  createdAt: string;
+};
 
 // export const cardData: Tcards[] = 
 //     const [cards, setCards] = useState<Tcards[]>([]);
