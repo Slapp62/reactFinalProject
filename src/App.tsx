@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./pages/about.pages";
 import Home from "./pages/home.pages";
 import UserTable from "./pages/adminControl.pages";
+import Error404 from "./pages/error.pages";
 
 function App() {
   
@@ -25,8 +26,11 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path='/adminControl' element={<UserTable />} />
+
+          <Route path="/*" element={<Error404 />} />
         </Routes>
         
         <footer>
