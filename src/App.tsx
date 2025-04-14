@@ -16,7 +16,7 @@ function App() {
   const [loginOpen, setLoginOpen] = useState(false);
   
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/reactFinalProject">
 
       <div className="flex flex-col min-h-screen bg-slate-200 dark:bg-black">
         <nav className="sticky top-0 z-50">
