@@ -21,12 +21,12 @@ export function Nav({ onLoginClick }: { onLoginClick: () => void }) {
       </div>
 
       <NavbarCollapse className="flex align-center justify-center">
-        <Link as={Link} to='/' active>Home</Link>
-        <Link as={Link} to='/about'>About</Link>
-        <NavbarLink href="#">Register</NavbarLink>
-        <NavbarLink onClick={onLoginClick} className="cursor-pointer">Login</NavbarLink>
-        <NavbarLink href="#">Contact</NavbarLink>
-        <Link as={Link} to="/adminControl">Admin Controls</Link>
+        <Link as={Link} to='/' active className='dark:text-white'>Home</Link>
+        <Link as={Link} to='/about' className='dark:text-white'>About</Link>
+        <Link as={Link} to='/register' className='dark:text-white'>Register</Link>
+        <NavbarLink onClick={onLoginClick} className="cursor-pointer dark:text-white" >Login</NavbarLink>
+        <NavbarLink href="#" className='dark:text-white' >Contact</NavbarLink>
+        <Link as={Link} to="/adminControl" className='dark:text-white' >Admin Controls</Link>
       </NavbarCollapse>
     </Navbar>
   );
