@@ -1,9 +1,10 @@
-import { Carousel } from "flowbite-react";
+
 import river from "../assets/images/river.jpg";
 import forest from "../assets/images/forest-bg.jpg";
 import mountains from "../assets/images/mountains-bg.jpg";
 import office from "../assets/images/office1.jpg";
 import darkOffice from "../assets/images/dark-office.jpg";
+import { Carousel } from "flowbite-react/components/Carousel";
 
 export function CarouselComp() {
   
